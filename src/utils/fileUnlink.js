@@ -10,3 +10,15 @@ exports.fileUnlik = async (path) => {
         return error;
     }
 };
+
+exports.allFileUnlink = async (dir) => {
+    try {
+        dir = `public/${dir}`;
+        if (fs.existsSync(dir)) {
+            fs.rmdirSync(dir, { recursive: true });
+            fs.mkdirSync(dir, { recursive: true });
+        }
+    } catch (error) {
+        return error
+    }
+}

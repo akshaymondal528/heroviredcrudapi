@@ -7,6 +7,21 @@ exports.STATUS_CODE = {
 };
 
 exports.SUCCESS = {
+    ADD_COURSE: {
+        statuscode: this.STATUS_CODE.OK,
+        success: true,
+        message: "Course added successfully!"
+    },
+    GET_COURSE: {
+        statuscode: this.STATUS_CODE.OK,
+        success: true,
+        message: "Course data!"
+    },
+    DELETE_COURSE: {
+        statuscode: this.STATUS_CODE.OK,
+        success: true,
+        message: "Delete course successfully!"
+    },
     ADMIN: {
         REGISTRATION: {
             statuscode: this.STATUS_CODE.OK,
@@ -61,6 +76,26 @@ exports.ERROR = {
         statuscode: this.STATUS_CODE.BADREQUEST,
         success: false,
         message: "Invalid credentials!"
+    },
+    COURSE_NOT_FOUND: {
+        statuscode: this.STATUS_CODE.NOTFOUND,
+        success: false,
+        message: "Course not found!"
+    },
+    COURSE_NOT_UPDATE: {
+        statuscode: this.STATUS_CODE.BADREQUEST,
+        success: false,
+        message: "Course not update!"
+    },
+    REQUIRED_COURSE_ID: {
+        statuscode: this.STATUS_CODE.BADREQUEST,
+        success: false,
+        message: "Required course id!"
+    },
+    COURSE_NOT_DELETE: {
+        statuscode: this.STATUS_CODE.BADREQUEST,
+        success: false,
+        message: "Course not delete!"
     },
     ADMIN: {
         ADMIN_NOT_FOUND: {
